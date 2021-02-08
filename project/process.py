@@ -7,7 +7,7 @@ import os
 
 def videoCap():
     # pytesseract.pytesseract.tesseract_cmd = "C:/Program Files/Tesseract-OCR/tesseract"
-    cap = cv2.VideoCapture('LPR_Project/project/video/test_car.mp4')
+    cap = cv2.VideoCapture('C:/Users/jeawa/Desktop/project/LPR_Project/project/video/test_car.mp4')
 
     count = 0
     before_chars = ""
@@ -321,7 +321,7 @@ def videoCap():
             if result_chars == "":
                 pass
             else:
-                if before_chars==result_chars and len(result_chars) == 7:
+                if before_chars==result_chars and 6 < len(result_chars) < 9:
                     count += 1
                 else:
                     before_chars = result_chars
